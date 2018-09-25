@@ -66,4 +66,24 @@ var str:string = "hello"
 //     throw new Error('错误');
 // })()
 
+// function run():string{
+//     return 'run';
+// }
 
+
+// function getInfo(name:string,age:number):string{
+//     return `${name} --- ${age}`;
+// }
+
+// alert(getInfo('james',20));
+
+// function getInfo(name:string,age?:number):string{
+//     if(age){
+//         return `${name} --- ${age}`;
+//     } else {
+//         return `${name} --- 年龄保密`;
+//     }
+// }
+
+// alert(getInfo('james'));
+// alert(getInfo('james',123));

@@ -30,7 +30,7 @@ Tasks => Run Task
 
 选择 tsc: watch ... 选项启动监视,此时就会自动编译ts文件到outDir目录下
 
-#### typescript中的数据类型
+### typescript中的数据类型
 
 >布尔类型 (boolean)
 >
@@ -208,4 +208,70 @@ a = 123;  // 报错
 a=(()=>{
     throw new Error('错误');
 })()   // 正常编译
+```
+
+### 函数定义
+*ES5 定义函数
+
+example: 
+```
+函数声明
+function run(){
+    return 'run';
+}
+
+匿名函数
+var run2 = function(){
+    return 'run2';
+}
+```
+
+*TS 定义函数
+
+example:
+```
+函数声明
+function run():string{
+    return 'run';
+}
+指定返回值类型的函数
+
+匿名函数
+var fun2 = function():number{
+    return 123;
+}
+fun2(); 执行函数
+```
+
+#### ts方法传参
+```
+声明
+function getInfo(name:string,age:number):string{
+    return `${name} --- ${age}`;
+}
+
+alert(getInfo('james','20'));
+
+匿名
+var getInfo = function(name:string,age:number):string{
+    return `${name} --- ${age}`;
+}
+
+没有返回值的方法
+function run():void{
+    console.log('run');
+}
+run();
+
+传值可选参数
+function getInfo(name:string,age?:number):string{
+    if(age){
+        return `${name} --- ${age}`;
+    } else {
+        return `${name} --- 年龄保密`;
+    }
+}
+
+alert(getInfo('james'));
+alert(getInfo('james',123));
 ```
